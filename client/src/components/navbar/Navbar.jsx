@@ -72,9 +72,9 @@ const Navbar = () => {
                 <div className=" mx-auto flex justify-between items-center">
                     {/* Left Icon */}
                     <div className="text-black flex me-10 items-center" onClick={()=>scrollToSection('home')}>
-                        <a  className="flex items-center py-1 ">
-                           BLOGHUB
-                        </a>
+                        <Link to='/' className="flex items-center py-1 ">
+                           CODEHUB
+                        </Link>
                     </div>
 
                     <div className="hidden md:flex lg:space-x-4 md:space-x-2 text-black md:mr-5 lg:mr-20 lg:gap-8 md:gap-5 gap-3">

@@ -53,7 +53,7 @@ const UpdateBlogPage = () => {
 
     return (
             <div className="min-h-[90vh] flex items-center justify-center bg-gray-100 mt-4">
-                <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-lg">
+                <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-4xl">
                     <h2 className="text-2xl font-bold mb-6 text-center text-gray-700">Update Blog Details</h2>
                     <form onSubmit={handleSubmit}>
                         {/* Blog Title */}

@@ -66,11 +66,11 @@ const AllBlogs = () => {
                         return (<tr key={i} className='grid grid-cols-12 shadow-lg mt-2 p-2'>
                             <th className='col-span-1 my-auto'>{i + 1}</th>
                             <td className='col-span-7 my-auto'>{item['blogTitle']}</td>
-                            <td className='col-span-2'>
+                            <td className='col-span-2 mt-2'>
                                 <Link to={`/dashboard/update/${item['_id']}`}
                                       className="text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600
                                         hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300
-                                 dark:focus:ring-green-800 shadow-lg shadow-green-500/50 dark:shadow-lg dark:shadow-green-800/80
+                                 dark:focus:ring-green-800 shadow-md shadow-green-500/50 dark:shadow-md dark:shadow-green-800/80
                                          font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
                                 >Edit
                                 </Link>
@@ -79,7 +79,7 @@ const AllBlogs = () => {
                                 <button type="button"
                                         className="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600
                                                 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300
-                                                 dark:focus:ring-red-800 shadow-lg shadow-red-500/50 dark:shadow-lg
+                                                 dark:focus:ring-red-800 shadow-md shadow-red-500/50 dark:shadow-md
                                                     dark:shadow-red-800/80 font-medium rounded-lg text-sm px-5 py-2.5
                                                      text-center me-2 mb-2"
                                         onClick={()=>deleteBlog(item['_id'])}

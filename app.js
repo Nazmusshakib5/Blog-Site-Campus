@@ -10,7 +10,9 @@ const mongoSanitize=require('express-mongo-sanitize')
 const xss=require('xss-clean')
 const cors=require('cors')
 const cookieParser=require('cookie-parser')
+
 const mongoose=require('mongoose')
+
 const path=require('path')
 
 require('dotenv').config();
@@ -37,6 +39,7 @@ app.use(limiter);
 //database Connection Before Routing
 const DB_User_ID=process.env.DB_USER_ID
 const DB_User_Pass=process.env.DB_USER_PASS
+
 let URL=`mongodb+srv://${DB_User_ID}:<password>@cluster0.gtiw82u.mongodb.net/BlogSite`;
 let OPTION={user:DB_User_ID,pass:DB_User_Pass,autoIndex:true};
 
@@ -46,7 +49,7 @@ mongoose.connect(URL,OPTION).then((res)=>{
     console.log(err)
 })
 
-app.set('etag',false);
+
 app.use('/api/v1',router)
 //directing the control to the frontend
 

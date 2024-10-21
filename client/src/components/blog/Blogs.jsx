@@ -21,16 +21,16 @@ const Blogs = () => {
             <div className='bg-white w-full' id='blog'>
                 <p className='text-center text-4xl py-10 uppercase'>Blogs</p>
             </div>
-            <div className='w-full grid grid-cols-12 px-10 gap-6 py-16'>
+            <div className='w-full grid grid-cols-12 px-10 max-w-7xl mx-auto gap-6 py-16'>
                 {
                     blog.map((item,i)=> (
                         <Link to={`/blogDetails/${item['_id']}`} key={i} className=' col-span-4 shadow-sm shadow-neutral-500 rounded-lg'>
                             <img alt='image'
                                 src={item['blogImage']}
-                                className=''
+                                className='h-72 w-full'
                             />
-                            <div className='py-5'>
-                                <p className='text-center font-semibold text-3xl'>{item['blogTitle']}</p>
+                            <div className='py-10'>
+                                <p className='text-center font-semibold text-2xl'>{item['blogTitle']}</p>
                             </div>
                         </Link>
                     ))
